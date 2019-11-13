@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import UIKit
+
+class LoginVC: UIViewController {
+    var myView: LoginView!
+        
+    override func loadView() {
+        super.loadView()
+        myView = LoginView()
+        self.view = myView
+    }
+    
+    
+    
+}
