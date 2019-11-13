@@ -1,5 +1,5 @@
 //
-//  UserModel.swift
+//  User.swift
 //  WarrenMyObjectives
 //
 //  Created by Leonardo Correa on 13/11/19.
@@ -10,6 +10,5 @@ import Foundation
 
 struct User: Codable {
     let email: String
-    let password: String
-    let accessToken: String
+    let password: String    
 }

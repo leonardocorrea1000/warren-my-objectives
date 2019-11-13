@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct Login: Decodable {
+    let accessToken: String
+}

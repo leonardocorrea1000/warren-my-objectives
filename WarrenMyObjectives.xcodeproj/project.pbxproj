@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E83566C8237C15A00050FF8F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83566C7237C15A00050FF8F /* User.swift */; };
+		E83566CD237C186F0050FF8F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83566CC237C186F0050FF8F /* Login.swift */; };
+		E83566CF237C18B20050FF8F /* Portfolios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83566CE237C18B20050FF8F /* Portfolios.swift */; };
+		E83566D1237C1D310050FF8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83566D0237C1D310050FF8F /* LaunchScreen.storyboard */; };
+		E83566D3237C27810050FF8F /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83566D2237C27810050FF8F /* KeychainService.swift */; };
+		E83566D5237C29BB0050FF8F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83566D4237C29BB0050FF8F /* LoginViewModel.swift */; };
+		E83566D7237C29CC0050FF8F /* ObjectivesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83566D6237C29CC0050FF8F /* ObjectivesViewModel.swift */; };
 		E88151C0237A008E00256B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88151BF237A008E00256B4C /* AppDelegate.swift */; };
 		E88151C9237A009200256B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E88151C8237A009200256B4C /* Assets.xcassets */; };
 		E88151D6237AD9B300256B4C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88151D5237AD9B300256B4C /* LoginVC.swift */; };
@@ -18,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E83566C7237C15A00050FF8F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E83566CC237C186F0050FF8F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		E83566CE237C18B20050FF8F /* Portfolios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolios.swift; sourceTree = "<group>"; };
+		E83566D0237C1D310050FF8F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E83566D2237C27810050FF8F /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		E83566D4237C29BB0050FF8F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E83566D6237C29CC0050FF8F /* ObjectivesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectivesViewModel.swift; sourceTree = "<group>"; };
 		E88151BC237A008E00256B4C /* WarrenMyObjectives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarrenMyObjectives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88151BF237A008E00256B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E88151C8237A009200256B4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +55,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E83566C6237C15880050FF8F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E83566CC237C186F0050FF8F /* Login.swift */,
+				E83566CE237C18B20050FF8F /* Portfolios.swift */,
+				E83566C7237C15A00050FF8F /* User.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E83566CB237C175B0050FF8F /* services */ = {
+			isa = PBXGroup;
+			children = (
+				E83566D2237C27810050FF8F /* KeychainService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
 		E88151B3237A008E00256B4C = {
 			isa = PBXGroup;
 			children = (
@@ -60,10 +92,13 @@
 		E88151BE237A008E00256B4C /* WarrenMyObjectives */ = {
 			isa = PBXGroup;
 			children = (
+				E83566CB237C175B0050FF8F /* services */,
+				E83566C6237C15880050FF8F /* model */,
 				E88151D4237AC98E00256B4C /* objectives */,
 				E88151D3237AC97F00256B4C /* login */,
 				E88151D9237AF32A00256B4C /* main */,
 				E88151BF237A008E00256B4C /* AppDelegate.swift */,
+				E83566D0237C1D310050FF8F /* LaunchScreen.storyboard */,
 				E88151C8237A009200256B4C /* Assets.xcassets */,
 				E88151CD237A009200256B4C /* Info.plist */,
 			);
@@ -75,6 +110,7 @@
 			children = (
 				E88151D5237AD9B300256B4C /* LoginVC.swift */,
 				E88151D7237AD9E200256B4C /* LoginView.swift */,
+				E83566D4237C29BB0050FF8F /* LoginViewModel.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -84,6 +120,7 @@
 			children = (
 				E88151E6237B3A8D00256B4C /* ObjectivesVC.swift */,
 				E88151E8237B3A9F00256B4C /* ObjectivesView.swift */,
+				E83566D6237C29CC0050FF8F /* ObjectivesViewModel.swift */,
 			);
 			path = objectives;
 			sourceTree = "<group>";
@@ -156,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E88151C9237A009200256B4C /* Assets.xcassets in Resources */,
+				E83566D1237C1D310050FF8F /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,10 +205,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E88151DD237AF3FB00256B4C /* MainVC.swift in Sources */,
+				E83566CD237C186F0050FF8F /* Login.swift in Sources */,
 				E88151C0237A008E00256B4C /* AppDelegate.swift in Sources */,
+				E83566C8237C15A00050FF8F /* User.swift in Sources */,
+				E83566D3237C27810050FF8F /* KeychainService.swift in Sources */,
+				E83566CF237C18B20050FF8F /* Portfolios.swift in Sources */,
 				E88151D8237AD9E200256B4C /* LoginView.swift in Sources */,
 				E88151DB237AF35000256B4C /* MainView.swift in Sources */,
+				E83566D5237C29BB0050FF8F /* LoginViewModel.swift in Sources */,
 				E88151E9237B3A9F00256B4C /* ObjectivesView.swift in Sources */,
+				E83566D7237C29CC0050FF8F /* ObjectivesViewModel.swift in Sources */,
 				E88151E7237B3A8D00256B4C /* ObjectivesVC.swift in Sources */,
 				E88151D6237AD9B300256B4C /* LoginVC.swift in Sources */,
 			);
