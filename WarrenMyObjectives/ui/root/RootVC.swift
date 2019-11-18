@@ -29,4 +29,55 @@ class RootVC: UIViewController {
         current.didMove(toParent: self)
     }
     
+    func showLoginScreen() {
+        let new = UINavigationController(rootViewController: LoginVC())
+        addChild(new)
+        new.view.frame = view.bounds
+        view.addSubview(new.view)
+        new.didMove(toParent: self)
+        current.willMove(toParent: nil)
+        current.view.removeFromSuperview()
+        current.removeFromParent()
+        current = new
+    }
+    
+    func switchToMainScreen() {
+        let objectivesVC = ObjectivesVC()
+        let new = UINavigationController(rootViewController: objectivesVC)
+        animateFadeTransition(to: new)
+    }
+    
+    func switchToLogout() {
+        let loginViewController = LoginVC()
+        let logoutScreen = UINavigationController(rootViewController: loginViewController)
+        animateDismissTransition(to: logoutScreen)
+    }
+    
+    private func animateFadeTransition(to new: UIViewController, completion: (() -> Void)? = nil) {
+        current.willMove(toParent: nil)
+        addChild(new)
+        
+        transition(from: current, to: new, duration: 0.3, options: [.transitionCrossDissolve, .curveEaseOut], animations: {
+        }) { completed in
+            self.current.removeFromParent()
+            new.didMove(toParent: self)
+            self.current = new
+            completion?()  //1
+        }
+    }
+    
+    private func animateDismissTransition(to new: UIViewController, completion: (() -> Void)? = nil) {
+        _ = CGRect(x: -view.bounds.width, y: 0, width: view.bounds.width, height: view.bounds.height)
+        current.willMove(toParent: nil)
+        addChild(new)
+        transition(from: current, to: new, duration: 0.3, options: [], animations: {
+            new.view.frame = self.view.bounds
+        }) { completed in
+            self.current.removeFromParent()
+            new.didMove(toParent: self)
+            self.current = new
+            completion?()
+        }
+    }
+    
 }

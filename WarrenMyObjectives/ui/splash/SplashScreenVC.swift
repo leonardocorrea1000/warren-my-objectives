@@ -33,9 +33,10 @@ class SplashScreenVC: UIViewController {
             
             if (wSelf.model.userIsAuthenticated()) {
                 // navigate to main screen
+                AppDelegate.shared.rootViewController.switchToMainScreen()
             } else {
                 // navigate to login screen
-                
+                AppDelegate.shared.rootViewController.switchToLogout()
             }
         }
     }
