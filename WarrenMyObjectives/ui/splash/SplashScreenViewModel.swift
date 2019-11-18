@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class SplashScreenViewModel {
+    
+    func userIsAuthenticated() -> Bool {
+        return KeychainService.getString(for: Constants.userEmailKey) != nil
+    }
+}

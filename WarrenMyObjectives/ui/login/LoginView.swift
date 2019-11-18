@@ -11,13 +11,11 @@ import UIKit
 
 class LoginView: UIView {
     
-    let topLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Hello World!"
-        label.textAlignment = .center
-                
-        return label
+    let logoImage: UIImageView = {
+        let img = UIImageView()
+        img.translatesAutoresizingMaskIntoConstraints = false
+        img.image = UIImage(named: "logo")
+        return img
     }()
     
     override init(frame: CGRect) {
@@ -31,12 +29,14 @@ class LoginView: UIView {
     }
     
     func setupViews() {
-        addSubview(topLabel)
-        
+        addSubview(logoImage)
+                
         NSLayoutConstraint.activate([
-            topLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            topLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            topLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 200),
+            logoImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
+            logoImage.widthAnchor.constraint(equalToConstant: 120),
+            logoImage.heightAnchor.constraint(equalToConstant: 120),
+            logoImage.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            
         ])
         
     }

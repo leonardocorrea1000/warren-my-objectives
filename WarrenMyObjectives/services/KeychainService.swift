@@ -9,7 +9,7 @@
 import Foundation
 
 class KeychainService {
-    func saveString(_ valueString: String, for key: String) {
+    static func saveString(_ valueString: String, for key: String) {
         let valueString = valueString.data(using: String.Encoding.utf8)!
         let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
                                     kSecAttrAccount as String: key,
@@ -18,7 +18,7 @@ class KeychainService {
         guard status == errSecSuccess else { return print("save error") }
     }
     
-    func getString(for key: String) -> String? {
+    static func getString(for key: String) -> String? {
         let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
                                     kSecAttrAccount as String: key,
                                     kSecMatchLimit as String: kSecMatchLimitOne,

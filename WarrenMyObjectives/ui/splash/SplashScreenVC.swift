@@ -11,23 +11,33 @@ import UIKit
 
 class SplashScreenVC: UIViewController {
     var myView: SplashScreenView!
+    var model: SplashScreenViewModel = SplashScreenViewModel()
     
     override func loadView() {
         super.loadView()
         myView = SplashScreenView()
         self.view = myView
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        checkUserIsAuthenticated()
     }
-        
-    private func openLoginVC() {
-        let vc = LoginVC()
-        vc.modalPresentationStyle = .fullScreen
-        
-        self.present(vc, animated: true, completion: nil)
+    
+    private func checkUserIsAuthenticated() {
+        myView.activityIndicator.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(3)) { [weak self] in
+            guard let wSelf = self else { return }
+            wSelf.myView.activityIndicator.stopAnimating()
+            
+            if (wSelf.model.userIsAuthenticated()) {
+                // navigate to main screen
+            } else {
+                // navigate to login screen
+                
+            }
+        }
     }
     
 }
