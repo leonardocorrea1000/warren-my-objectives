@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MainView: UIView {
+class SplashScreenView: UIView {
     
     
     override init(frame: CGRect) {

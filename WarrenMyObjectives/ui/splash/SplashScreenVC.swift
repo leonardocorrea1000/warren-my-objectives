@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-class MainVC: UIViewController {
-    var myView: MainView!
+class SplashScreenVC: UIViewController {
+    var myView: SplashScreenView!
     
     override func loadView() {
         super.loadView()
-        myView = MainView()
+        myView = SplashScreenView()
         self.view = myView
     }
         
