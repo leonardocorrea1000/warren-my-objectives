@@ -1,0 +1,36 @@
+PODS:
+  - MaterialComponents/AnimationTiming (94.2.0)
+  - MaterialComponents/Elevation (94.2.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Palettes (94.2.0)
+  - MaterialComponents/private/Application (94.2.0)
+  - MaterialComponents/private/Color (94.2.0)
+  - MaterialComponents/private/Math (94.2.0)
+  - MaterialComponents/TextFields (94.2.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Elevation
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - MaterialComponents/Typography (94.2.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (2.0.0)
+
+DEPENDENCIES:
+  - MaterialComponents/TextFields
+
+SPEC REPOS:
+  trunk:
+    - MaterialComponents
+    - MDFInternationalization
+
+SPEC CHECKSUMS:
+  MaterialComponents: ddaf6964e9bc429fc228fa46344e406c976cd85c
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+
+PODFILE CHECKSUM: 511f56f30c205293bc27222ab97dd6e717307ff0
+
+COCOAPODS: 1.8.4
