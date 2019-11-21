@@ -37,5 +37,3 @@ This project is licensed under the MIT License.
 ## Acknowledgments
 
 * This project is under development.
-* Inspiration
-* etc
